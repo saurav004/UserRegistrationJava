@@ -3,6 +3,15 @@ package com.UserRegistrationJava;
 public class Person {
 	String firstName;
 	String lastName;
+	String emailId;
+
+	public String getEmailId() {
+		return emailId;
+	}
+
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
+	}
 
 	public String getLastName() {
 		return lastName;
