@@ -10,5 +10,7 @@ public class App {
 		validate.validateEmailId(person);
 		validate.validatePhoneNumber(person);
 		validate.validatePassword(person);
+		validate.validateAllEmail(Validator.validEmailIds);
+		validate.validateAllEmail(Validator.inValidEmailIds);
 	}
 }
