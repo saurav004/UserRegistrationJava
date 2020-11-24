@@ -9,5 +9,6 @@ public class App {
 		validate.validatelastName(person);
 		validate.validateEmailId(person);
 		validate.validatePhoneNumber(person);
+		validate.validatePassword(person);
 	}
 }

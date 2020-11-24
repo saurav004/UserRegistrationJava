@@ -5,6 +5,15 @@ public class Person {
 	String lastName;
 	String emailId;
 	String phoneNumber;
+	String password;
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 	public String getPhoneNumber() {
 		return phoneNumber;
