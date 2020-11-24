@@ -8,7 +8,9 @@ public class Validator {
 	static String patternFirstAndLastName = "^[A-Z]{1}[a-zA-Z]{2,30}$";
 	static String patternEmailId = "^[a-zA-Z][a-zA-Z0-9_\\-+]*[.]{0,1}[a-zA-Z0-9_\\-+]{1,}[@][a-zA-Z0-9]{1,}[.][a-zA-Z]{2,}[.]{0,}[a-zA-Z]*$";
 	static String patternPhoneNumber = "^[+]{1}[0-9]{2}[ ][0-9]{10}";
-	static String patternPassword="^[a-zA-Z0-9]{8,}$";
+	static String patternPassword1="^[a-zA-Z0-9]{8,}$";
+	static String patternPassword2="^(?=.*[A-Z])[a-zA-Z0-9]{8,}$";
+	
 	static Scanner scan = new Scanner(System.in);
 
 	public void validatefirstName(Person person) {
@@ -86,7 +88,7 @@ public class Validator {
 			System.out.println("\n\tEnter your password");
 			password = scan.nextLine();
 			System.out.println("Phone Number :" + password);
-			Pattern pattern = Pattern.compile(patternPassword);
+			Pattern pattern = Pattern.compile(patternPassword2);
 			Matcher Match = pattern.matcher(password);
 			if (Match.matches()) {
 				person.setPassword(password);
