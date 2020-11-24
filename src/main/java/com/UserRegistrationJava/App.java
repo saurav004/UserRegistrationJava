@@ -8,5 +8,6 @@ public class App
         Person person =new Person();
         Validator validate=new Validator();
         validate.validatefirstName(person);
+        validate.validatelastName(person);
     }
 }
