@@ -8,19 +8,10 @@ public class Validator {
 	static String patternFirstAndLastName = "^[A-Z]{1}[a-zA-Z]{2,30}$";
 	static String patternEmailId = "^[a-zA-Z][a-zA-Z0-9_\\-+]*[.]{0,1}[a-zA-Z0-9_\\-+]{1,}[@][a-zA-Z0-9]{1,}[.][a-zA-Z]{2,}[.]{0,}[a-zA-Z]*$";
 	static String patternPhoneNumber = "^[+]{1}[0-9]{2}[ ][0-9]{10}";
-	static String patternPassword1 = "^[a-zA-Z0-9]{8,}$";
-	static String patternPassword2 = "^(?=.*[A-Z]).{8,}$";
-	static String patternPassword3 = "^(?=.*[A-Z])(?=.*?[0-9]).{8,}$";
-	static String patternPassword4 = "^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
-	// valid email Ids
-	public static final String[] validEmailIds = new String[] { "abc@yahoo.com", "abc-100@yahoo.com",
-			"abc.100@yahoo.com", "abc111@abc.com", "abc-100@abc.net", "abc.100@abc.com.au", "abc@1.com",
-			"abc@gmail.com.com", "abc+100@gmail.com" };
-	// invalid email Ids
-
-	public static final String[] inValidEmailIds = new String[] { "abc@.com.my", "abc123@gmail.a", "abc123@.com",
-			"abc123@.com.com", ".abc@abc.com", "abc()*@gmail.com", "abc..2002@gmail.com", "abc.@gmail.com",
-			"abc@abc@gmail.com", "abc@gmail.com.1a", "abc@gmail.com.aa.au" };
+	static String patternPassword1="^[a-zA-Z0-9]{8,}$";
+	static String patternPassword2="^(?=.*[A-Z]).{8,}$";
+	static String patternPassword3="^(?=.*[A-Z])(?=.*?[0-9]).{8,}$";
+	static String patternPassword4="^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
 
 	static Scanner scan = new Scanner(System.in);
 
@@ -92,7 +83,7 @@ public class Validator {
 				System.out.println("Invalid Phone Number!!!");
 		}
 	}
-
+	
 	public void validatePassword(Person person) {
 		String password = null;
 		while (true) {
@@ -108,22 +99,6 @@ public class Validator {
 			} else
 				System.out.println("Invalid password!!!");
 		}
-	}
-
-	public void validateAllEmail(String[] emailStack) {
-		String email = null;
-		System.out.println(emailStack.length);
-		for (int i = 0; i < emailStack.length; i++) {
-			email =emailStack[i] ;
-			Pattern pattern = Pattern.compile(patternEmailId);
-			Matcher Match = pattern.matcher(email);
-			if (Match.matches()) {
-				System.out.println(email+" : email Validated");
-			} else
-				System.out.println(email+" : Invalid email IDs!!!");
-		}
-			
-		
 	}
 
 }
