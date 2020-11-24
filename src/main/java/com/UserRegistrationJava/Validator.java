@@ -10,6 +10,8 @@ public class Validator {
 	static String patternPhoneNumber = "^[+]{1}[0-9]{2}[ ][0-9]{10}";
 	static String patternPassword1="^[a-zA-Z0-9]{8,}$";
 	static String patternPassword2="^(?=.*[A-Z])[a-zA-Z0-9]{8,}$";
+	static String patternPassword3="^(?=.*[A-Z])(?=.*?[0-9])[a-zA-Z0-9]{8,}$";
+	
 	
 	static Scanner scan = new Scanner(System.in);
 
@@ -88,7 +90,7 @@ public class Validator {
 			System.out.println("\n\tEnter your password");
 			password = scan.nextLine();
 			System.out.println("Phone Number :" + password);
-			Pattern pattern = Pattern.compile(patternPassword2);
+			Pattern pattern = Pattern.compile(patternPassword3);
 			Matcher Match = pattern.matcher(password);
 			if (Match.matches()) {
 				person.setPassword(password);
